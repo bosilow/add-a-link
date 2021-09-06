@@ -1,0 +1,26 @@
+.sorter {
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-right: 220px;
+  border-top: solid rgb(199, 194, 194) 3px;
+  display: flex;
+  justify-content: flex-start;
+
+  & .sorter-select {
+    height: 30px;
+    width: 175px;
+    background-color: #8082e4;
+    color: white;
+    border: solid grey 1.5px;
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 140px;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding-left: 50px;
+    width: 100px;
+  }
+}

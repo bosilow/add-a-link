@@ -1,0 +1,107 @@
+body.active-modal {
+  background-color: grey;
+  pointer-events: none;
+  transition: background-color 0.15s linear;
+
+  & .submit-link-container {
+    background-color: grey;
+  }
+  & .submit-link-btn {
+    background-color: grey;
+    border: solid white 1.5px;
+  }
+
+  & .points-container {
+    background-color: grey;
+    border: solid white 1.5px;
+  }
+
+  & .upvote-btn {
+    background-color: grey;
+  }
+
+  & .downvote-btn {
+    background-color: grey;
+  }
+
+  & .sorter-select {
+    background-color: grey;
+    border: solid white 1.5px;
+  }
+
+  .single-link:hover {
+    background-color: grey;
+
+    & .delete-icon {
+      opacity: 0;
+    }
+  }
+}
+
+.modal-content {
+  color: black;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2e308a;
+  border: 1px solid white;
+  width: 500px;
+  height: 250px;
+  pointer-events: auto;
+  transition: background-color 10s ease-in;
+
+  @media screen and (max-width: 550px) {
+    width: 360px;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 300px;
+  }
+
+  & .modal-header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+  }
+
+  & .modal-link-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+    margin-bottom: 60px;
+    font-size: xx-large;
+    color: white;
+    word-wrap: break-word;
+  }
+
+  & .modal-question {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: white;
+  }
+}
+
+.exit-modal {
+  cursor: pointer;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-evenly;
+
+  & button {
+    background: black;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 16px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+}

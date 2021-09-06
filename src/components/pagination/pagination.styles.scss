@@ -1,0 +1,22 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0;
+
+  & .page-link {
+    text-decoration: none;
+    color: white;
+    padding: 0 8px;
+  }
+
+  & .page-nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 0 8px;
+  }
+
+  .active-link {
+    border: 1px solid white;
+  }
+}

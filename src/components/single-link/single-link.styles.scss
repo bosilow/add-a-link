@@ -1,0 +1,137 @@
+.delete-icon {
+  opacity: 0;
+}
+
+.single-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 9rem;
+  width: 25rem;
+  border-radius: 10px;
+
+  @media screen and (max-width: 550px) {
+    height: 7rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 17rem;
+  }
+}
+
+.single-link:hover {
+  background-color: #9799e7;
+  transition: background-color 0.25s linear;
+
+  & .delete-icon {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.points-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid grey 1.5px;
+  border-radius: 10px;
+  width: 6.5rem;
+  height: 7rem;
+  margin-left: 5px;
+  margin-top: 10px;
+  background-color: #8082e4;
+
+  @media screen and (max-width: 550px) {
+    width: 5rem;
+    height: 5.5rem;
+    margin-left: 20px;
+  }
+
+  @media screen and (max-width: 320px) {
+    margin: 10px 10px;
+    height: 5rem;
+  }
+
+  & .points-counter {
+    font-weight: bold;
+    font-size: 2.5rem;
+
+    @media screen and (max-width: 550px) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 320px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.link-data {
+  width: 250px;
+
+  @media screen and (max-width: 320px) {
+    width: 200px;
+  }
+}
+
+.vote-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  & .upvote-btn {
+    background: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+
+  & .downvote-btn {
+    background: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+}
+
+.link-name {
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media screen and (max-width: 320px) {
+    font-size: 15px;
+    margin-top: 7px;
+  }
+}
+
+.link-url {
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  overflow-x: auto;
+}
+
+.link-url::-webkit-scrollbar {
+  height: 0.5vw;
+}
+
+.link-url::-webkit-scrollbar-thumb {
+  background-color: #7775;
+}
+
+.link-url::-webkit-scrollbar-track {
+  background-color: #5555;
+}
+.link-url::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+.link-url::-webkit-scrollbar-track:hover {
+  background-color: #555;
+}
