@@ -16,15 +16,12 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [linksPerPage] = useState(5);
 
-  // Get current links
   const indexOfLastLink = currentPage * linksPerPage;
   const indexOfFirstLink = indexOfLastLink - linksPerPage;
   const currentLinks = links.slice(indexOfFirstLink, indexOfLastLink);
 
-  // Change Page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Local Storage
   useEffect(() => {
     const data = localStorage.getItem("data");
 
@@ -37,19 +34,16 @@ const App = () => {
     localStorage.setItem("data", JSON.stringify(links));
   });
 
-  // Add Link
   const addLink = (link) => {
     const id = Math.floor(Math.random() * 10000) + 1;
     const newLink = { id, ...link };
     setLinks([newLink, ...links]);
   };
 
-  // Delete Link
   const deleteLink = (id) => {
     setLinks(links.filter((link) => link.id !== id));
   };
 
-  // Vote Link
   const handleVote = (id, increaseCount) => {
     links.forEach((link) => {
       if (id === link.id) {
@@ -59,7 +53,6 @@ const App = () => {
     setLinks([...links]);
   };
 
-  // Sort Links
   const sortLinks = (e) => {
     const newLinks = [...links];
     if (e.target.value === "mostVoted") {
